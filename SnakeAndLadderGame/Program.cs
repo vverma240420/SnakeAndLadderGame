@@ -8,12 +8,14 @@
             const int Ladder = 1;
             const int NoGame = 2;
             int position = 0;
+            int diceCount = 0;
             Random random = new Random();
 
             while (position < 100)
             {
                 int diceRoll = random.Next(1, 7);
                 Console.WriteLine("Rolled Dice number is:" + diceRoll);
+                diceCount++;
                 int choice = random.Next(0, 3);
 
                 switch (choice)
@@ -41,7 +43,7 @@
                         else if (position > 100)
                         {
                             position -= diceRoll;
-                            Console.WriteLine("Player 1 position : " + position);
+                            Console.WriteLine("position is above 100; doesn't Count");
                         }
                         else
                         {
@@ -54,8 +56,9 @@
                         break;
 
                 }
-                Console.ReadLine();
             }
+            Console.WriteLine("Dice Count to win the Game: " + diceCount);
+            Console.ReadLine();
         }
     }
 }
