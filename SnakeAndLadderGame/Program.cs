@@ -34,16 +34,18 @@
                     case Ladder:
                         position += diceRoll;
                         Console.WriteLine("Its a ladder");
-                        if (position >= 100)
+                        if (position == 100)
                         {
-                            position = 100;
-                            Console.WriteLine("Player 1 position : " + position);
                             Console.WriteLine("Player 1 wins");
-
+                        }
+                        else if (position > 100)
+                        {
+                            position -= diceRoll;
+                            Console.WriteLine("position is above 100; doesn't Count");
                         }
                         else
                         {
-                            Console.WriteLine("Player 1 position : " + position);
+                            Console.WriteLine("Player 1 position :" + position);
                         }
                         break;
                     case NoGame:
@@ -53,8 +55,7 @@
 
                 }
                 Console.ReadLine();
-
-            }          
+            }
         }
     }
 }
