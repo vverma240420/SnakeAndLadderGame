@@ -41,7 +41,7 @@
                         else if (position > 100)
                         {
                             position -= diceRoll;
-                            Console.WriteLine("position is above 100; doesn't Count");
+                            Console.WriteLine("Player 1 position : " + position);
                         }
                         else
                         {
