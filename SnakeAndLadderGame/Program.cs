@@ -9,8 +9,6 @@
             playerOne = position;
             Console.WriteLine("....Snake And Ladder....");
             Console.WriteLine("position of the playerone is =" + playerOne);
-            Console.ReadLine();
-
         }
     }
 }
